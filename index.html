@@ -604,6 +604,7 @@ window.addEventListener('DOMContentLoaded', () => {
     .month-nav button { height: 38px; }
     #btnImport { padding: 0 1rem; height: 38px; flex: 1; }
     .btn-excel { display: none !important; }
+    .btn-meisai-pc, a[href*="manual"] { display: inline-flex !important; font-size: 0.65rem !important; padding: 0 0.3rem !important; }
 
     .member-summary { grid-template-columns: repeat(3, 1fr); gap: 0.45rem; margin-bottom: 1rem; }
     .member-card { padding: 0.65rem 0.3rem; }
@@ -914,7 +915,7 @@ window.addEventListener('DOMContentLoaded', () => {
 <script>
 const PAYMENT_METHODS = ['現金', '楽天カード', '楽天銀行', 'Bitflyerカード', '百五銀行', 'kabuアンドカード', 'メルペイカード'];
 
-const MEMBERS = ['しゅん', 'まゆ', 'れいな', 'ゆうせい', 'かいかい', '共通'];
+const MEMBERS = ['共通', 'しゅん', 'まゆ', 'れいな', 'ゆうせい', 'かいかい'];
 const MEMBER_COLORS = ['#c0392b', '#e67e22', '#2980b9', '#27ae60', '#8e44ad', '#7f8c8d'];
 
 const DEFAULT_CATEGORIES = {
