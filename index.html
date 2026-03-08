@@ -598,7 +598,7 @@ window.addEventListener('DOMContentLoaded', () => {
     .app { padding: 0.9rem; padding-bottom: calc(68px + env(safe-area-inset-bottom)); }
 
     header { flex-direction: column; align-items: stretch; gap: 0.7rem; padding-bottom: 1rem; margin-bottom: 1.2rem; }
-    header h1 { font-size: 1.8rem; }
+    header h1 { font-size: 1.4rem; letter-spacing: -0.01em; }
     .header-top { display: flex; justify-content: space-between; align-items: center; }
     .month-nav { justify-content: space-between; }
     .month-nav button { height: 38px; }
@@ -724,6 +724,7 @@ window.addEventListener('DOMContentLoaded', () => {
       <button id="nextMonth">▶</button>
       <button id="btnImport" onclick="openImportModal()" style="background:var(--cream);color:var(--ink);border:1px solid var(--border);width:auto;padding:0 0.9rem;font-family:'Shippori Mincho',serif;font-size:0.8rem;font-weight:600;letter-spacing:0.08em;height:32px;cursor:pointer;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--ai)';this.style.color='var(--ai)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--ink)'">↑ インポート</button>
       <button class="btn-excel btn-meisai-pc" onclick="openMeisaiPage()" style="display:inline-flex;align-items:center;background:var(--ai);color:white;border:none;width:auto;padding:0 0.9rem;font-family:'Shippori Mincho',serif;font-size:0.8rem;font-weight:600;letter-spacing:0.08em;height:32px;cursor:pointer;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.82'" onmouseout="this.style.opacity='1'">📋 明細</button>
+      <a href="manual.html" target="_blank" style="display:inline-flex;align-items:center;background:var(--cream);color:var(--ink);border:1px solid var(--border);width:auto;padding:0 0.9rem;font-family:'Shippori Mincho',serif;font-size:0.8rem;font-weight:600;letter-spacing:0.08em;height:32px;cursor:pointer;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--ink)'">📖 マニュアル</a>
       <button class="btn-excel" onclick="exportExcel()" style="display:inline-flex;align-items:center;background:var(--midori);color:white;border:none;width:auto;padding:0 0.9rem;font-family:'Shippori Mincho',serif;font-size:0.8rem;font-weight:600;letter-spacing:0.08em;height:32px;cursor:pointer;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.82'" onmouseout="this.style.opacity='1'">↓ Excel出力</button>
     </div>
   </header>
