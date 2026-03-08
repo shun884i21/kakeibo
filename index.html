@@ -706,7 +706,7 @@ window.addEventListener('DOMContentLoaded', () => {
       cursor:pointer;letter-spacing:0.18em;
       transition:opacity 0.2s;
     " onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">入　る</button>
-    <div id="loginError" style="color:#e07a8a;font-size:0.8rem;margin-top:0.65rem;text-align:center;display:none;font-family:'DM Mono',monospace;">
+    <div id="loginError" style="color:#e07a8a;font-size:0.75rem;margin-top:0.65rem;text-align:center;display:none;font-family:'DM Mono',monospace;">
       — パスワードが違います —
     </div>
   </div>
@@ -722,10 +722,10 @@ window.addEventListener('DOMContentLoaded', () => {
       <button id="prevMonth">◀</button>
       <div class="month-display" id="monthDisplay"></div>
       <button id="nextMonth">▶</button>
-      <button id="btnImport" onclick="openImportModal()" style="background:var(--cream);color:var(--ink);border:1px solid var(--border);width:auto;padding:0 0.9rem;font-family:'Shippori Mincho',serif;font-size:0.8rem;font-weight:600;letter-spacing:0.08em;height:32px;cursor:pointer;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--ai)';this.style.color='var(--ai)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--ink)'">↑ インポート</button>
-      <button class="btn-excel btn-meisai-pc" onclick="openMeisaiPage()" style="display:inline-flex;align-items:center;background:var(--ai);color:white;border:none;width:auto;padding:0 0.9rem;font-family:'Shippori Mincho',serif;font-size:0.8rem;font-weight:600;letter-spacing:0.08em;height:32px;cursor:pointer;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.82'" onmouseout="this.style.opacity='1'">📋 明細</button>
-      <a href="manual.html" target="_blank" style="display:inline-flex;align-items:center;background:var(--cream);color:var(--ink);border:1px solid var(--border);width:auto;padding:0 0.9rem;font-family:'Shippori Mincho',serif;font-size:0.8rem;font-weight:600;letter-spacing:0.08em;height:32px;cursor:pointer;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--ink)'">📖 マニュアル</a>
-      <button class="btn-excel" onclick="exportExcel()" style="display:inline-flex;align-items:center;background:var(--midori);color:white;border:none;width:auto;padding:0 0.9rem;font-family:'Shippori Mincho',serif;font-size:0.8rem;font-weight:600;letter-spacing:0.08em;height:32px;cursor:pointer;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.82'" onmouseout="this.style.opacity='1'">↓ Excel出力</button>
+      <button id="btnImport" onclick="openImportModal()" style="background:var(--cream);color:var(--ink);border:1px solid var(--border);width:auto;padding:0 0.6rem;font-family:'Shippori Mincho',serif;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;height:32px;cursor:pointer;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--ai)';this.style.color='var(--ai)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--ink)'">↑ インポート</button>
+      <button class="btn-excel btn-meisai-pc" onclick="openMeisaiPage()" style="display:inline-flex;align-items:center;background:var(--ai);color:white;border:none;width:auto;padding:0 0.6rem;font-family:'Shippori Mincho',serif;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;height:32px;cursor:pointer;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.82'" onmouseout="this.style.opacity='1'">📋 明細</button>
+      <a href="manual.html" target="_blank" style="display:inline-flex;align-items:center;background:var(--cream);color:var(--ink);border:1px solid var(--border);width:auto;padding:0 0.6rem;font-family:'Shippori Mincho',serif;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;height:32px;cursor:pointer;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--ink)'">📖 Manual</a>
+      <button class="btn-excel" onclick="exportExcel()" style="display:inline-flex;align-items:center;background:var(--midori);color:white;border:none;width:auto;padding:0 0.6rem;font-family:'Shippori Mincho',serif;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;height:32px;cursor:pointer;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.82'" onmouseout="this.style.opacity='1'">↓ Excel出力</button>
     </div>
   </header>
 
@@ -1423,7 +1423,7 @@ function renderCategories(data) {
 
   const container = document.getElementById('catList');
   if (sorted.length === 0) {
-    container.innerHTML = '<div style="font-size:0.8rem;color:var(--muted);text-align:center;padding:1rem">支出なし</div>';
+    container.innerHTML = '<div style="font-size:0.75rem;color:var(--muted);text-align:center;padding:1rem">支出なし</div>';
     return;
   }
   container.innerHTML = sorted.map(([cat, val]) => `
