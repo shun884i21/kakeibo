@@ -706,7 +706,7 @@ window.addEventListener('DOMContentLoaded', () => {
       cursor:pointer;letter-spacing:0.18em;
       transition:opacity 0.2s;
     " onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">入　る</button>
-    <div id="loginError" style="color:#e07a8a;font-size:0.75rem;margin-top:0.65rem;text-align:center;display:none;font-family:'DM Mono',monospace;">
+    <div id="loginError" style="color:#e07a8a;font-size:0.7rem;margin-top:0.65rem;text-align:center;display:none;font-family:'DM Mono',monospace;">
       — パスワードが違います —
     </div>
   </div>
@@ -722,10 +722,10 @@ window.addEventListener('DOMContentLoaded', () => {
       <button id="prevMonth">◀</button>
       <div class="month-display" id="monthDisplay"></div>
       <button id="nextMonth">▶</button>
-      <button id="btnImport" onclick="openImportModal()" style="background:var(--cream);color:var(--ink);border:1px solid var(--border);width:auto;padding:0 0.6rem;font-family:'Shippori Mincho',serif;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;height:32px;cursor:pointer;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--ai)';this.style.color='var(--ai)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--ink)'">↑ インポート</button>
-      <button class="btn-excel btn-meisai-pc" onclick="openMeisaiPage()" style="display:inline-flex;align-items:center;background:var(--ai);color:white;border:none;width:auto;padding:0 0.6rem;font-family:'Shippori Mincho',serif;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;height:32px;cursor:pointer;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.82'" onmouseout="this.style.opacity='1'">📋 明細</button>
-      <a href="manual.html" target="_blank" style="display:inline-flex;align-items:center;background:var(--cream);color:var(--ink);border:1px solid var(--border);width:auto;padding:0 0.6rem;font-family:'Shippori Mincho',serif;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;height:32px;cursor:pointer;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--ink)'">📖 Manual</a>
-      <button class="btn-excel" onclick="exportExcel()" style="display:inline-flex;align-items:center;background:var(--midori);color:white;border:none;width:auto;padding:0 0.6rem;font-family:'Shippori Mincho',serif;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;height:32px;cursor:pointer;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.82'" onmouseout="this.style.opacity='1'">↓ Excel出力</button>
+      <button id="btnImport" onclick="openImportModal()" style="background:var(--cream);color:var(--ink);border:1px solid var(--border);width:auto;padding:0 0.4rem;font-family:'Shippori Mincho',serif;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;height:32px;cursor:pointer;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--ai)';this.style.color='var(--ai)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--ink)'">取込</button>
+      <button class="btn-excel btn-meisai-pc" onclick="openMeisaiPage()" style="display:inline-flex;align-items:center;background:var(--ai);color:white;border:none;width:auto;padding:0 0.4rem;font-family:'Shippori Mincho',serif;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;height:32px;cursor:pointer;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.82'" onmouseout="this.style.opacity='1'">📋 明細</button>
+      <a href="manual.html" target="_blank" style="display:inline-flex;align-items:center;background:var(--cream);color:var(--ink);border:1px solid var(--border);width:auto;padding:0 0.4rem;font-family:'Shippori Mincho',serif;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;height:32px;cursor:pointer;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--ink)'">📖 Manual</a>
+      <button class="btn-excel" onclick="exportExcel()" style="display:inline-flex;align-items:center;background:var(--midori);color:white;border:none;width:auto;padding:0 0.4rem;font-family:'Shippori Mincho',serif;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;height:32px;cursor:pointer;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.82'" onmouseout="this.style.opacity='1'">Excel</button>
     </div>
   </header>
 
@@ -888,7 +888,7 @@ window.addEventListener('DOMContentLoaded', () => {
             <select id="importDefCategory" onchange="renderImportTable()"></select>
           </div>
         </div>
-        <p style="font-size:0.75rem;color:var(--muted);margin-bottom:0.6rem">各行のメンバーとカテゴリを個別に変更できます。チェックを外した行は取込まれません。</p>
+        <p style="font-size:0.7rem;color:var(--muted);margin-bottom:0.6rem">各行のメンバーとカテゴリを個別に変更できます。チェックを外した行は取込まれません。</p>
         <div class="import-preview">
           <table>
             <thead>
@@ -1358,8 +1358,8 @@ function renderYearlySummary() {
   const expH = 'background:var(--beni);color:white;padding:0.45rem 0.6rem;font-weight:600;font-size:0.72rem;text-align:center;';
 
   function fmtN(n) { return n > 0 ? '¥' + n.toLocaleString('ja-JP') : '—'; }
-  function cellStyle(isEven) { return `padding:0.4rem 0.6rem;text-align:right;border-bottom:1px solid var(--border);font-size:0.75rem;${isEven?'background:var(--cream)':''}`; }
-  function cellStyleL(isEven) { return `padding:0.4rem 0.6rem;text-align:left;border-bottom:1px solid var(--border);font-size:0.75rem;font-weight:600;${isEven?'background:var(--cream)':''}`; }
+  function cellStyle(isEven) { return `padding:0.4rem 0.6rem;text-align:right;border-bottom:1px solid var(--border);font-size:0.7rem;${isEven?'background:var(--cream)':''}`; }
+  function cellStyleL(isEven) { return `padding:0.4rem 0.6rem;text-align:left;border-bottom:1px solid var(--border);font-size:0.7rem;font-weight:600;${isEven?'background:var(--cream)':''}`; }
 
   let rows = '';
   let totals = { incNorm:0, incSpec:0, incTemp:0, expNorm:0, expSpec:0 };
@@ -1423,7 +1423,7 @@ function renderCategories(data) {
 
   const container = document.getElementById('catList');
   if (sorted.length === 0) {
-    container.innerHTML = '<div style="font-size:0.75rem;color:var(--muted);text-align:center;padding:1rem">支出なし</div>';
+    container.innerHTML = '<div style="font-size:0.7rem;color:var(--muted);text-align:center;padding:1rem">支出なし</div>';
     return;
   }
   container.innerHTML = sorted.map(([cat, val]) => `
