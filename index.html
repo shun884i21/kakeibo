@@ -25,7 +25,7 @@ const FIREBASE_CONFIG = {
 // ▲▲▲ ここまで ▲▲▲
 
 // 家族共通パスワード（自由に変更してOK）
-const FAMILY_PASSWORD = "kakeibo2026";
+const FAMILY_PASSWORD = "884kakeibo2026";
 
 window._firebaseReady = false;
 window._db = null;
@@ -957,7 +957,7 @@ const SESSION_KEY = 'kakeibo_auth';
 
 function tryLogin() {
   const pw = document.getElementById('loginPassword').value;
-  const correct = window.FAMILY_PASSWORD || 'kakeibo2026';
+  const correct = window.FAMILY_PASSWORD || '884kakeibo2026';
   if (pw === correct) {
     sessionStorage.setItem(SESSION_KEY, '1');
     document.getElementById('loginScreen').style.display = 'none';
