@@ -220,6 +220,8 @@ window.addEventListener('DOMContentLoaded', () => {
   .card.income .amount  { color: var(--midori); }
   .card.expense .amount { color: var(--beni); }
   .card.balance .amount { color: var(--ai); }
+.card.balance .amount.positive { color: #333; }  /* 黒字は黒色 */
+.card.balance .amount.negative { color: var(--beni); }  /* 赤字は赤色 */
 
   /* ── メイングリッド ── */
   .main-grid {
@@ -613,7 +615,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     .summary { gap: 0.6rem; margin-bottom: 1rem; }
     .card { padding: 0.85rem 0.8rem; }
-    .card .amount { font-size: 1.1rem; }
+    .card .amount { font-size: 1.0rem; }
     .card label { font-size: 0.6rem; }
 
     .mobile-tabs {
@@ -1100,7 +1102,7 @@ let currentDate = new Date();
 let currentYear = currentDate.getFullYear();
 let currentMonth = currentDate.getMonth() + 1;
 let selectedDay = currentDate.getDate();
-let selectedMember = MEMBERS[0];
+let selectedMember = MEMBERS[0];  // 共通
 let filterMember = null;
 let lineChart;
 
