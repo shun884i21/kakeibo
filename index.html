@@ -1497,10 +1497,7 @@ let importRows = [];
 function openImportModal() {
   document.getElementById('importModal').classList.add('open');
   resetImport();
-  // 支払い方法セレクタを初期化
-  const pmSel = document.getElementById('importPaymentMethod');
-  pmSel.innerHTML = '<option value="">選択してください</option>' +
-    PAYMENT_METHODS.map(p => `<option value="${p}">${p}</option>`).join('');
+  initImportModal();
   // デフォルトカテゴリセレクタを初期化
   const cats = getCategories();
   const cSel = document.getElementById('importDefCategory');
