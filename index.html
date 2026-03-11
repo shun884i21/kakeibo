@@ -886,6 +886,13 @@ window.addEventListener('DOMContentLoaded', () => {
         </div>
         
         <div style="margin-bottom:1rem;">
+          <label style="font-size:0.68rem;font-family:'DM Mono',monospace;letter-spacing:0.12em;color:var(--muted);text-transform:uppercase;display:block;margin-bottom:0.4rem">このファイルの支払い方法</label>
+          <select id="importPaymentMethod" style="width:100%;background:var(--paper);border:1px solid var(--border);padding:0.55rem 0.7rem;font-family:'Shippori Mincho',serif;font-size:0.9rem;color:var(--ink);outline:none;">
+            <option value="">選択してください</option>
+          </select>
+        </div>
+        
+        <div style="margin-bottom:1rem;">
           <label style="font-size:0.68rem;font-family:'DM Mono',monospace;letter-spacing:0.12em;color:var(--muted);text-transform:uppercase;display:block;margin-bottom:0.4rem">どの月の明細として登録するか</label>
           <select id="importTargetMonth" style="width:100%;background:var(--paper);border:1px solid var(--border);padding:0.55rem 0.7rem;font-family:'Shippori Mincho',serif;font-size:0.9rem;color:var(--ink);outline:none;">
             <option value="">選択してください</option>
@@ -1661,6 +1668,10 @@ async function handleImportFile(file) {
   if (ext === 'csv') {
     showStatus('CSVを解析中…', 'loading');
     const text = await file.text();
+    
+    // 支払い方法を自動判定
+    const autoDetectedPayment = detectPaymentMethod(file.name, text);
+    showStatus(`${autoDetectedPayment}のCSVとして解析中…`, 'loading');
     parseCSV(text);
   } else if (ext === 'pdf') {
     showStatus('PDFをAIで解析中…少しお待ちください', 'loading');
