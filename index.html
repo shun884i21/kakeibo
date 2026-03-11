@@ -925,7 +925,7 @@ window.addEventListener('DOMContentLoaded', () => {
 </div>
 
 <script>
-const PAYMENT_METHODS = ['現金', '楽天カード', '楽天銀行', 'Bitflyerカード', '百五銀行', 'kabuアンドカード', 'メルペイカード'];
+const PAYMENT_METHODS = ['楽天カード', '楽天銀行', 'Bitflyerカード', 'kabuアンドカード', 'メルペイカード'];
 
 const MEMBERS = ['共通', 'しゅん', 'まゆ', 'れいな', 'ゆうせい', 'かいかい'];
 const MEMBER_COLORS = ['#c0392b', '#e67e22', '#2980b9', '#27ae60', '#8e44ad', '#7f8c8d'];
@@ -1918,7 +1918,7 @@ async function exportExcel() {
   setCell(3, 5, 'BitFlyerカード', { ...S.header, ...S.gray });
   setCell(3, 7, '楽天銀行', { ...S.header, ...S.gray });
   setCell(3, 9, 'kabuアンドカード', { ...S.header, ...S.gray });
-  setCell(3, 11, '百五銀行', { ...S.header, ...S.gray });
+  // setCell(3, 11, '百五銀行', { ...S.header, ...S.gray }); // インポート対象外
 
   // 収入データ（B・C列 行4〜）
   const incomes = transactions.filter(t => t.type === 'income');
@@ -1945,7 +1945,7 @@ async function exportExcel() {
     { pm: 'Bitflyerカード', col: 5, amtCol: 6 },
     { pm: '楽天銀行',       col: 7, amtCol: 8 },
     { pm: 'kabuアンドカード', col: 9, amtCol: 10 },
-    { pm: '百五銀行',       col: 11, amtCol: 12 },
+    // { pm: '百五銀行',       col: 11, amtCol: 12 }, // インポート対象外
   ];
 
   pmColumns.forEach(({ pm, col, amtCol }) => {
